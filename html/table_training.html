@@ -1,0 +1,169 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sortable Table</title>
+        <script src="https://unpkg.com/tablesort@5.2.1/dist/tablesort.min.js"></script>
+        <script src="https://unpkg.com/tablesort@5.2.1/dist/sorts/tablesort.number.min.js"></script>
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+            th, td {
+                text-align: center;
+                padding: 8px;
+                border: 1px solid #ccc;
+            }
+            th {
+                cursor: pointer;
+                background-color: #f2f2f2;
+            }
+            tr:nth-child(even) { background-color: #f9f9f9; }
+        </style>
+    </head>
+    <body>
+        <h2>Performance Table</h2>
+        <table class="dataframe sortable">
+  <thead>
+    <tr style="text-align: right;">
+      <th>batch_size</th>
+      <th>epochs</th>
+      <th>mean_diff</th>
+      <th>std_diff</th>
+      <th>skewness_diff</th>
+      <th>kurtosis_diff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>16</td>
+      <td>100</td>
+      <td>0.114</td>
+      <td>0.069</td>
+      <td>0.475</td>
+      <td>1.638</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>1000</td>
+      <td>0.002</td>
+      <td>0.001</td>
+      <td>0.296</td>
+      <td>0.635</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>10000</td>
+      <td>0.010</td>
+      <td>0.003</td>
+      <td>0.066</td>
+      <td>0.170</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>100000</td>
+      <td>0.009</td>
+      <td>0.003</td>
+      <td>0.120</td>
+      <td>0.042</td>
+    </tr>
+    <tr>
+      <td>64</td>
+      <td>100</td>
+      <td>0.179</td>
+      <td>0.087</td>
+      <td>0.628</td>
+      <td>1.791</td>
+    </tr>
+    <tr>
+      <td>64</td>
+      <td>1000</td>
+      <td>0.000</td>
+      <td>0.003</td>
+      <td>0.344</td>
+      <td>0.832</td>
+    </tr>
+    <tr>
+      <td>64</td>
+      <td>10000</td>
+      <td>0.002</td>
+      <td>0.001</td>
+      <td>0.022</td>
+      <td>0.031</td>
+    </tr>
+    <tr>
+      <td>64</td>
+      <td>100000</td>
+      <td>0.000</td>
+      <td>0.001</td>
+      <td>0.022</td>
+      <td>0.084</td>
+    </tr>
+    <tr>
+      <td>256</td>
+      <td>100</td>
+      <td>0.114</td>
+      <td>0.107</td>
+      <td>0.405</td>
+      <td>1.877</td>
+    </tr>
+    <tr>
+      <td>256</td>
+      <td>1000</td>
+      <td>0.001</td>
+      <td>0.009</td>
+      <td>0.350</td>
+      <td>0.969</td>
+    </tr>
+    <tr>
+      <td>256</td>
+      <td>10000</td>
+      <td>0.004</td>
+      <td>0.001</td>
+      <td>0.019</td>
+      <td>0.144</td>
+    </tr>
+    <tr>
+      <td>256</td>
+      <td>100000</td>
+      <td>0.002</td>
+      <td>0.001</td>
+      <td>0.075</td>
+      <td>0.198</td>
+    </tr>
+    <tr>
+      <td>1024</td>
+      <td>100</td>
+      <td>0.128</td>
+      <td>0.105</td>
+      <td>0.721</td>
+      <td>1.804</td>
+    </tr>
+    <tr>
+      <td>1024</td>
+      <td>1000</td>
+      <td>0.030</td>
+      <td>0.241</td>
+      <td>0.160</td>
+      <td>1.916</td>
+    </tr>
+    <tr>
+      <td>1024</td>
+      <td>10000</td>
+      <td>0.229</td>
+      <td>0.337</td>
+      <td>1.207</td>
+      <td>0.273</td>
+    </tr>
+  </tbody>
+</table>
+        <script>
+            new Tablesort(document.querySelector(".sortable"));
+        </script>
+    </body>
+    </html>
+    
